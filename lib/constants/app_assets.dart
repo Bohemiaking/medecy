@@ -8,4 +8,5 @@ class AppAssets {
   static const bellIcon = "assets/images/bellIcon.svg";
   static const searchIcon = "assets/images/searchIcon.svg";
   static const appBrandLogoSVG = "assets/appLogo-brand.svg";
+  static const defUserIcon = "assets/images/defUserIcon.png";
 }

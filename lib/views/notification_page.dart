@@ -22,28 +22,19 @@ class NotificationPage extends StatelessWidget {
             ),
             Text(
               "Notification",
-              style: textSmall(),
+              style: textApp(),
             ),
             const SizedBox(
               height: 44,
             ),
-            notificationContainer(),
-            const SizedBox(
-              height: 12,
-            ),
-            notificationContainer(),
-            const SizedBox(
-              height: 12,
-            ),
-            notificationContainer(),
-            const SizedBox(
-              height: 12,
-            ),
-            notificationContainer(),
-            const SizedBox(
-              height: 12,
-            ),
-            notificationContainer(),
+            ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return notificationContainer();
+              },
+            )
           ],
         ),
       )),
@@ -51,46 +42,53 @@ class NotificationPage extends StatelessWidget {
   }
 
   Widget notificationContainer() {
-    return Container(
-      height: 103,
-      width: 343,
-      decoration: BoxDecoration(
-          color: const Color(0xfff9f9f9),
-          border: Border.all(
-            width: 1,
-            color: const Color(0xffEBEBEB),
-          ),
-          borderRadius: BorderRadius.circular(8)),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
-                  "Agreement Created 🎉",
-                  style: TextStyle(
-                      color: Color(0xff777777),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14),
+    return Column(
+      children: [
+        Container(
+          height: 103,
+          width: 343,
+          decoration: BoxDecoration(
+              color: const Color(0xfff9f9f9),
+              border: Border.all(
+                width: 1,
+                color: const Color(0xffEBEBEB),
+              ),
+              borderRadius: BorderRadius.circular(8)),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      "Agreement Created 🎉",
+                      style: TextStyle(
+                          color: Color(0xff777777),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14),
+                    ),
+                    Text(
+                      "DD/MM/YYYY",
+                      style: TextStyle(color: Color(0xff777777), fontSize: 12),
+                    )
+                  ],
                 ),
-                Text(
-                  "DD/MM/YYYY",
+                const SizedBox(
+                  height: 12,
+                ),
+                const Text(
+                  "Agreement created for property - RARP-0974250. Please check now",
                   style: TextStyle(color: Color(0xff777777), fontSize: 12),
-                )
+                ),
               ],
             ),
-            const SizedBox(
-              height: 12,
-            ),
-            const Text(
-              "Agreement created for property - RARP-0974250. Please check now",
-              style: TextStyle(color: Color(0xff777777), fontSize: 12),
-            )
-          ],
+          ),
         ),
-      ),
+        const SizedBox(
+          height: 12,
+        ),
+      ],
     );
   }
 }

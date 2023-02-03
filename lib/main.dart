@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_constants.dart';
 import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
+import 'package:rentaroof_agent/views/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: AppConstants.appName,
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
-      home: const NotificationPage(),
+      home: const MessagePage(),
       routes: appRoutes(context),
     );
   }
