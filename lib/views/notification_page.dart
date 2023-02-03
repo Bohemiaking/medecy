@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:rentaroof_agent/constants/app_theme.dart';
+import 'package:rentaroof_agent/views/base/app_bar.dart';
+
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({super.key});
+
+  static const route = 'notification';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: appBar(),
+      body: SafeArea(
+          child: Padding(
+        padding: const EdgeInsets.only(right: 24, left: 23),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 24,
+            ),
+            Text(
+              "Notification",
+              style: textSmall(),
+            ),
+            const SizedBox(
+              height: 44,
+            ),
+            notificationContainer(),
+            const SizedBox(
+              height: 12,
+            ),
+            notificationContainer(),
+            const SizedBox(
+              height: 12,
+            ),
+            notificationContainer(),
+            const SizedBox(
+              height: 12,
+            ),
+            notificationContainer(),
+            const SizedBox(
+              height: 12,
+            ),
+            notificationContainer(),
+          ],
+        ),
+      )),
+    );
+  }
+
+  Widget notificationContainer() {
+    return Container(
+      height: 103,
+      width: 343,
+      decoration: BoxDecoration(
+          color: const Color(0xfff9f9f9),
+          border: Border.all(
+            width: 1,
+            color: const Color(0xffEBEBEB),
+          ),
+          borderRadius: BorderRadius.circular(8)),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  "Agreement Created 🎉",
+                  style: TextStyle(
+                      color: Color(0xff777777),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+                Text(
+                  "DD/MM/YYYY",
+                  style: TextStyle(color: Color(0xff777777), fontSize: 12),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            const Text(
+              "Agreement created for property - RARP-0974250. Please check now",
+              style: TextStyle(color: Color(0xff777777), fontSize: 12),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
