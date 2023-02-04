@@ -7,7 +7,7 @@ import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 
 import '../base/app_textunderline.dart';
-import '../base/imagetextstack_container.dart';
+import '../base/imagetextstack.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

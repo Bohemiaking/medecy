@@ -11,7 +11,8 @@ class AppTextUnderline extends StatelessWidget {
       height: 8,
       width: 48,
       decoration: BoxDecoration(
-          color: Color(0xfff47622), borderRadius: BorderRadius.circular(30)),
+          color: const Color(0xfff47622),
+          borderRadius: BorderRadius.circular(30)),
     );
   }
 }
