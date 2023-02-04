@@ -12,30 +12,33 @@ class NotificationPage extends StatelessWidget {
     return Scaffold(
       appBar: appBar(context),
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.only(right: 24, left: 23),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 24,
-            ),
-            Text(
-              "Notification",
-              style: textApp(),
-            ),
-            const SizedBox(
-              height: 44,
-            ),
-            ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return notificationContainer();
-              },
-            )
-          ],
+          child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.only(right: 24, left: 23),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 24,
+              ),
+              Text(
+                "Notification",
+                style: textApp(),
+              ),
+              const SizedBox(
+                height: 44,
+              ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return notificationContainer();
+                },
+              )
+            ],
+          ),
         ),
       )),
     );

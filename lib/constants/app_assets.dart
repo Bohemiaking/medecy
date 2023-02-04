@@ -2,7 +2,7 @@ class AppAssets {
   static const appLogo = "assets/images/appLogo.svg";
   static const appTextLogo = "assets/images/appBrand.svg";
   static const appLogoBrand = "assets/images/appBrandLogo.png";
-  static const bgImage = "assets/images/bgImage.svg";
+  static const bgImage = "assets/images/bgImage.png";
   static const chatIcon = "assets/images/chatIcon.svg";
   static const heartIcon = "assets/images/heartIcon.svg";
   static const bellIcon = "assets/images/bellIcon.svg";

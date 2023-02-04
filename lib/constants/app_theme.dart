@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData appTheme() => ThemeData(
-    fontFamily: GoogleFonts.poppins().fontFamily, primarySwatch: Colors.orange);
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      primarySwatch: Colors.orange,
+      splashColor: Colors.orange.shade200,
+    );
 
 textApp() {
   return const TextStyle(
@@ -11,5 +14,7 @@ textApp() {
 
 textMedium() {
   return const TextStyle(
-      color: Color(0xff777777), fontSize: 12,);
+    color: Color(0xff777777),
+    fontSize: 12,
+  );
 }

@@ -40,20 +40,23 @@ class MessagePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12)),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      messageSearch(),
-                      const SizedBox(
-                        height: 26,
-                      ),
-                      ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: 2,
-                          itemBuilder: ((context, index) {
-                            return messageContainer();
-                          }))
-                    ],
+                  child: SingleChildScrollView(
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    child: Column(
+                      children: [
+                        messageSearch(),
+                        const SizedBox(
+                          height: 26,
+                        ),
+                        ListView.builder(
+                            physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            itemCount: 20,
+                            itemBuilder: ((context, index) {
+                              return messageContainer();
+                            }))
+                      ],
+                    ),
                   ),
                 ),
               )

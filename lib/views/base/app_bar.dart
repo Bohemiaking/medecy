@@ -64,12 +64,14 @@ appBar(BuildContext context) {
               width: 3,
             ),
             IconButton(
-                onPressed: (() {}),
-                icon: const Icon(
-                  Icons.menu,
-                  color: Color(0xffF47622),
-                  size: 25,
-                ))
+              onPressed: (() {}),
+              icon: const Icon(
+                Icons.menu,
+                color: Color(0xffF47622),
+                size: 25,
+              ),
+              splashRadius: 20,
+            )
           ],
         ),
       )
