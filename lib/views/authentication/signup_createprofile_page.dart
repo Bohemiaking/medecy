@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
+import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
 import 'package:rentaroof_agent/views/base/textfields/select_textfield.dart';
@@ -94,6 +95,53 @@ class _SignupCreateprofilePageState extends State<SignupCreateprofilePage> {
                               ),
                             )
                           ],
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        AppTextField(
+                          isPassword: false,
+                          txtData: "Email id",
+                          hintData: "Enter your Email id",
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        AppTextField(
+                          isPassword: false,
+                          txtData: "Occupation",
+                          hintData: "Enter your Occupation",
+                        ),
+                        const SizedBox(
+                          height: 24,
+                        ),
+                        AppButton(
+                            height: 41.0,
+                            width: width(context) / 1,
+                            isColorFilled: true,
+                            txtdata: "Continue"),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Already have an account ? ",
+                              style: textMedium()
+                                  .copyWith(fontWeight: FontWeight.bold),
+                            ),
+                            TextButton(
+                                onPressed: (() {}),
+                                child: Text(
+                                  "Log in",
+                                  style: textApp()
+                                      .copyWith(color: const Color(0xffF47622)),
+                                ))
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 28,
                         )
                       ],
                     ),
