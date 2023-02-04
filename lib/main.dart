@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_constants.dart';
 import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
-import 'package:rentaroof_agent/views/authentication/login_page.dart';
-import 'package:rentaroof_agent/views/authentication/otp_page.dart';
+import 'package:rentaroof_agent/views/authentication/signup_createprofile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: AppConstants.appName,
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
-      home: const OtpPage(),
+      home: const SignupCreateprofilePage(),
       routes: appRoutes(context),
     );
   }

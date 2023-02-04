@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
-import 'package:rentaroof_agent/views/base/app_textfield.dart';
+import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 
@@ -53,7 +53,9 @@ class _LoginPageState extends State<LoginPage> {
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
-                          const AppTextUnderline(),
+                          AppTextUnderline(
+                            width: 48.0,
+                          ),
                           const SizedBox(
                             height: 28,
                           ),
@@ -87,7 +89,8 @@ class _LoginPageState extends State<LoginPage> {
                                       })),
                                   Text(
                                     "Remember Me",
-                                    style: textMedium().copyWith(fontSize: 14.0),
+                                    style:
+                                        textMedium().copyWith(fontSize: 14.0),
                                   )
                                 ],
                               ),
@@ -111,7 +114,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Text(
                         "Or",
-                        style: textMedium().copyWith(fontWeight: FontWeight.bold),
+                        style:
+                            textMedium().copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 12,

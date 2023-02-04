@@ -52,10 +52,10 @@ class _OtpPageState extends State<OtpPage> {
               const SizedBox(
                 height: 16,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                child: SizedBox(
-                  width: width(context),
+              SizedBox(
+                width: width(context),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -66,13 +66,16 @@ class _OtpPageState extends State<OtpPage> {
                             fontSize: 16,
                             fontWeight: FontWeight.bold),
                       ),
-                      const AppTextUnderline(),
+                      AppTextUnderline(
+                        width: 48.0,
+                      ),
                       const SizedBox(
                         height: 28,
                       ),
                       Text(
                         "Enter OTP",
-                        style: textMedium().copyWith(fontWeight: FontWeight.bold),
+                        style:
+                            textMedium().copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         height: 17,
@@ -124,8 +127,8 @@ class _OtpPageState extends State<OtpPage> {
                                   onPressed: () {},
                                   child: Text(
                                     "Resend OTP",
-                                    style: textApp()
-                                        .copyWith(color: const Color(0xffF47622)),
+                                    style: textApp().copyWith(
+                                        color: const Color(0xffF47622)),
                                   ))
                             ],
                           ),
