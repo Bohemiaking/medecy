@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
+import 'package:rentaroof_agent/views/authentication/createprofile_page.dart';
+import 'package:rentaroof_agent/views/authentication/otp_page.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
+import 'package:rentaroof_agent/views/dashboard_page.dart';
 
 import '../base/app_textunderline.dart';
 import '../base/imagetextstack.dart';
@@ -105,6 +109,8 @@ class _LoginPageState extends State<LoginPage> {
                         height: 30,
                       ),
                       AppButton(
+                          onTap: () =>
+                              appNavigation(context, OtpPage.route),
                           height: 41.0,
                           width: width(context) / 1,
                           isColorFilled: true,
@@ -137,7 +143,8 @@ class _LoginPageState extends State<LoginPage> {
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
                           TextButton(
-                              onPressed: (() {}),
+                              onPressed: () => appNavigation(
+                                  context, CreateProfilePage.route),
                               child: Text(
                                 "Sign up",
                                 style: textApp()

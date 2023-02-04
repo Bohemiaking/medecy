@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/constants/app_routes.dart';
+import 'package:rentaroof_agent/views/authentication/login_page.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
@@ -10,6 +12,8 @@ import '../base/app_textunderline.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
+
+  static const route = 'signup';
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +86,8 @@ class SignupPage extends StatelessWidget {
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
                             TextButton(
-                                onPressed: (() {}),
+                                onPressed: () =>
+                                    appNavigation(context, LoginPage.route),
                                 child: Text(
                                   "Log in",
                                   style: textApp()

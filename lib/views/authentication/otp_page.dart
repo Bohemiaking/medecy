@@ -3,10 +3,12 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
+import 'package:rentaroof_agent/views/dashboard_page.dart';
 
 import '../base/app_textunderline.dart';
 
@@ -110,6 +112,7 @@ class _OtpPageState extends State<OtpPage> {
                                 otpText = "";
                               });
                               log("otpText : $otpText");
+                              appNavigation(context, DashboardPage.route);
                             },
                           ),
                           const SizedBox(
