@@ -13,7 +13,7 @@ class MessagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(),
+      appBar: appBar(context),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.only(right: 24, left: 23),

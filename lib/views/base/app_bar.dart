@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof_agent/constants/app_assets.dart';
+import 'package:rentaroof_agent/views/bookmark_page.dart';
+import 'package:rentaroof_agent/views/message/message_page.dart';
+import 'package:rentaroof_agent/views/notification_page.dart';
 
-appBar() {
+appBar(BuildContext context) {
   return AppBar(
     toolbarHeight: 80,
     elevation: 0,
@@ -17,20 +20,37 @@ appBar() {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            SvgPicture.asset(AppAssets.heartIcon, height: 40),
+            InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, BookMarkPage.route);
+                },
+                borderRadius: BorderRadius.circular(20),
+                child: SvgPicture.asset(AppAssets.heartIcon, height: 40)),
             const SizedBox(
               width: 10,
             ),
-            SvgPicture.asset(
-              AppAssets.chatIcon,
-              height: 40,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, MessagePage.route);
+              },
+              borderRadius: BorderRadius.circular(20),
+              child: SvgPicture.asset(
+                AppAssets.chatIcon,
+                height: 40,
+              ),
             ),
             const SizedBox(
               width: 10,
             ),
-            SvgPicture.asset(
-              AppAssets.bellIcon,
-              height: 40,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, NotificationPage.route);
+              },
+              borderRadius: BorderRadius.circular(20),
+              child: SvgPicture.asset(
+                AppAssets.bellIcon,
+                height: 40,
+              ),
             ),
             const SizedBox(
               width: 15,
