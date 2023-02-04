@@ -15,47 +15,50 @@ class MessagePage extends StatelessWidget {
     return Scaffold(
       appBar: appBar(context),
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.only(right: 24, left: 23),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 24,
-            ),
-            Text(
-              "Messages",
-              style: textApp(),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            Container(
-              height: height(context) / 1.4,
-              width: width(context) / 0.9,
-              decoration: BoxDecoration(
-                  color: const Color(0xffD9E9FE),
-                  borderRadius: BorderRadius.circular(12)),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    messageSearch(),
-                    const SizedBox(
-                      height: 26,
-                    ),
-                    ListView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: 2,
-                        itemBuilder: ((context, index) {
-                          return messageContainer();
-                        }))
-                  ],
-                ),
+          child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.only(right: 24, left: 23),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 24,
               ),
-            )
-          ],
+              Text(
+                "Messages",
+                style: textApp(),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: height(context) / 1.4,
+                width: width(context) / 0.9,
+                decoration: BoxDecoration(
+                    color: const Color(0xffD9E9FE),
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      messageSearch(),
+                      const SizedBox(
+                        height: 26,
+                      ),
+                      ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: 2,
+                          itemBuilder: ((context, index) {
+                            return messageContainer();
+                          }))
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       )),
     );

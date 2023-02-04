@@ -14,3 +14,11 @@ appRoutes(BuildContext context) {
     ChatPage.route: (context) => const ChatPage(),
   };
 }
+
+appNavigation(context, route) {
+  Navigator.pushNamedAndRemoveUntil(context, route, (route) => false);
+}
+
+appNavigationPop(context, route) {
+  Navigator.pushNamed(context, route);
+}

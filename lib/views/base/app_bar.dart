@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rentaroof_agent/constants/app_assets.dart';
+import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/views/bookmark_page.dart';
 import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
@@ -22,7 +23,7 @@ appBar(BuildContext context) {
           children: [
             InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, BookMarkPage.route);
+                  appNavigation(context, BookMarkPage.route);
                 },
                 borderRadius: BorderRadius.circular(20),
                 child: SvgPicture.asset(AppAssets.heartIcon, height: 40)),
@@ -31,7 +32,7 @@ appBar(BuildContext context) {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, MessagePage.route);
+                appNavigation(context, MessagePage.route);
               },
               borderRadius: BorderRadius.circular(20),
               child: SvgPicture.asset(
@@ -44,7 +45,7 @@ appBar(BuildContext context) {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, NotificationPage.route);
+                appNavigation(context, NotificationPage.route);
               },
               borderRadius: BorderRadius.circular(20),
               child: SvgPicture.asset(
