@@ -25,127 +25,130 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: SafeArea(
-          child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            const ImageTextStackContainer(),
-            const SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-              child: SizedBox(
-                width: width(context),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "LOGIN",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        const AppTextUnderline(),
-                        const SizedBox(
-                          height: 28,
-                        ),
-                        AppTextField(
-                          isPassword: false,
-                          txtData: "Email id/Mobile No.",
-                          hintData: "Enter your Email id/Mobile No.",
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        AppTextField(
-                          isPassword: true,
-                          txtData: "Password",
-                          hintData: "Enter your password",
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Checkbox(
-                                    value: checkbox,
-                                    onChanged: ((value) {
-                                      setState(() {
-                                        checkbox = !checkbox;
-                                      });
-                                    })),
-                                Text(
-                                  "Remember Me",
-                                  style: textMedium().copyWith(fontSize: 14.0),
-                                )
-                              ],
-                            ),
-                            const UnderlineTextButton(
-                              txtData: "Forgot Password ?",
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    AppButton(
-                        height: 41.0,
-                        width: width(context) / 1,
-                        isColorFilled: true,
-                        txtdata: "Login"),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Text(
-                      "Or",
-                      style: textMedium().copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    AppButton(
-                        height: 41.0,
-                        width: width(context) / 1,
-                        isColorFilled: false,
-                        txtdata: "Request OTP"),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Don't have an account ? ",
-                          style: textMedium()
-                              .copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        TextButton(
-                            onPressed: (() {}),
-                            child: Text(
-                              "Sign up",
-                              style: textApp()
-                                  .copyWith(color: const Color(0xffF47622)),
-                            ))
-                      ],
-                    )
-                  ],
-                ),
+      body: SizedBox(
+        height: height(context),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Column(
+            children: [
+              const ImageTextStackContainer(),
+              const SizedBox(
+                height: 16,
               ),
-            )
-          ],
-        ),
-      )),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                child: SizedBox(
+                  width: width(context),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "LOGIN",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          const AppTextUnderline(),
+                          const SizedBox(
+                            height: 28,
+                          ),
+                          AppTextField(
+                            isPassword: false,
+                            txtData: "Email id/Mobile No.",
+                            hintData: "Enter your Email id/Mobile No.",
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          AppTextField(
+                            isPassword: true,
+                            txtData: "Password",
+                            hintData: "Enter your password",
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Checkbox(
+                                      value: checkbox,
+                                      onChanged: ((value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      })),
+                                  Text(
+                                    "Remember Me",
+                                    style: textMedium().copyWith(fontSize: 14.0),
+                                  )
+                                ],
+                              ),
+                              const UnderlineTextButton(
+                                txtData: "Forgot Password ?",
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      AppButton(
+                          height: 41.0,
+                          width: width(context) / 1,
+                          isColorFilled: true,
+                          txtdata: "Login"),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        "Or",
+                        style: textMedium().copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      AppButton(
+                          height: 41.0,
+                          width: width(context) / 1,
+                          isColorFilled: false,
+                          txtdata: "Request OTP"),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Don't have an account ? ",
+                            style: textMedium()
+                                .copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          TextButton(
+                              onPressed: (() {}),
+                              child: Text(
+                                "Sign up",
+                                style: textApp()
+                                    .copyWith(color: const Color(0xffF47622)),
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        )),
+      ),
     );
   }
 }

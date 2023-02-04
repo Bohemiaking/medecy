@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rentaroof_agent/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 
@@ -11,36 +12,39 @@ class NotificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: SafeArea(
-          child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.only(right: 24, left: 23),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 24,
-              ),
-              Text(
-                "Notification",
-                style: textApp(),
-              ),
-              const SizedBox(
-                height: 44,
-              ),
-              ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return notificationContainer();
-                },
-              )
-            ],
+      body: SizedBox(
+        height: height(context),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.only(right: 24, left: 23),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 24,
+                ),
+                Text(
+                  "Notification",
+                  style: textApp(),
+                ),
+                const SizedBox(
+                  height: 44,
+                ),
+                ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return notificationContainer();
+                  },
+                )
+              ],
+            ),
           ),
-        ),
-      )),
+        )),
+      ),
     );
   }
 

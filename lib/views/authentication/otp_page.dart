@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
@@ -27,12 +29,6 @@ class _OtpPageState extends State<OtpPage> {
   late String otpText;
 
   @override
-  void initState() {
-    otpText = otp1_4th.text + otp2_4th.text + otp3_4th.text + otp4_4th.text;
-    super.initState();
-  }
-
-  @override
   void dispose() {
     otp1_4th.dispose();
     otp2_4th.dispose();
@@ -45,89 +41,104 @@ class _OtpPageState extends State<OtpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: SafeArea(
-          child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            const ImageTextStackContainer(),
-            const SizedBox(
-              height: 16,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-              child: SizedBox(
-                width: width(context),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "LOGIN",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    const AppTextUnderline(),
-                    const SizedBox(
-                      height: 28,
-                    ),
-                    Text(
-                      "Enter OTP",
-                      style: textMedium().copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(
-                      height: 17,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        otpTextField(context, otp1_4th),
-                        otpTextField(context, otp2_4th),
-                        otpTextField(context, otp3_4th),
-                        otpTextField(context, otp4_4th)
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 135,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        AppButton(
+      body: SizedBox(
+        height: height(context),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Column(
+            children: [
+              const ImageTextStackContainer(),
+              const SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                child: SizedBox(
+                  width: width(context),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "LOGIN",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      const AppTextUnderline(),
+                      const SizedBox(
+                        height: 28,
+                      ),
+                      Text(
+                        "Enter OTP",
+                        style: textMedium().copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 17,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          otpTextField(context, otp1_4th),
+                          otpTextField(context, otp2_4th),
+                          otpTextField(context, otp3_4th),
+                          otpTextField(context, otp4_4th)
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 135,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          AppButton(
                             height: 41.0,
                             width: width(context) / 1,
                             isColorFilled: true,
-                            txtdata: "Login"),
-                        const SizedBox(
-                          height: 12,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Didn't get the OTP ? ",
-                              style: textMedium()
-                                  .copyWith(fontWeight: FontWeight.bold),
-                            ),
-                            TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "Resend OTP",
-                                  style: textApp()
-                                      .copyWith(color: const Color(0xffF47622)),
-                                ))
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
+                            txtdata: "Login",
+                            onTap: () {
+                              otpText = otp1_4th.text +
+                                  otp2_4th.text +
+                                  otp3_4th.text +
+                                  otp4_4th.text;
+                              log(otpText);
+                              setState(() {
+                                otpText = "";
+                              });
+                              log("otpText : $otpText");
+                            },
+                          ),
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Didn't get the OTP ? ",
+                                style: textMedium()
+                                    .copyWith(fontWeight: FontWeight.bold),
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Resend OTP",
+                                    style: textApp()
+                                        .copyWith(color: const Color(0xffF47622)),
+                                  ))
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            )
-          ],
-        ),
-      )),
+              )
+            ],
+          ),
+        )),
+      ),
     );
   }
 

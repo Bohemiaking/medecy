@@ -17,35 +17,38 @@ class BookMarkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: SafeArea(
-          child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.only(right: 24, left: 23),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 24,
-              ),
-              Text(
-                "Bookmarks",
-                style: textApp(),
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 2,
-                  itemBuilder: ((context, index) {
-                    return bookmarkedContainer(context);
-                  }))
-            ],
+      body: SizedBox(
+        height: height(context),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.only(right: 24, left: 23),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 24,
+                ),
+                Text(
+                  "Bookmarks",
+                  style: textApp(),
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 2,
+                    itemBuilder: ((context, index) {
+                      return bookmarkedContainer(context);
+                    }))
+              ],
+            ),
           ),
-        ),
-      )),
+        )),
+      ),
     );
   }
 

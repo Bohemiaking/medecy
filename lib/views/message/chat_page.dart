@@ -15,45 +15,48 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: SafeArea(
-          child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.only(right: 24, left: 23),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 24,
-              ),
-              Text(
-                "Messages",
-                style: textApp(),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              Container(
-                height: height(context) / 1.3,
-                width: width(context) / 0.9,
-                decoration: BoxDecoration(
-                    color: const Color(0xffEBEBEB),
-                    borderRadius: BorderRadius.circular(12)),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      chatHeader(),
-                      chatContent(context),
-                      chatSendContainer()
-                    ],
-                  ),
+      body: SizedBox(
+        height: height(context),
+        child: SafeArea(
+            child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.only(right: 24, left: 23),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 24,
                 ),
-              )
-            ],
+                Text(
+                  "Messages",
+                  style: textApp(),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                Container(
+                  height: height(context) / 1.3,
+                  width: width(context) / 0.9,
+                  decoration: BoxDecoration(
+                      color: const Color(0xffEBEBEB),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        chatHeader(),
+                        chatContent(context),
+                        chatSendContainer()
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
-      )),
+        )),
+      ),
     );
   }
 
