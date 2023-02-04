@@ -17,10 +17,10 @@ class ChatPage extends StatelessWidget {
       appBar: appBar(),
       body: SafeArea(
           child: SingleChildScrollView(
-            physics: const AlwaysScrollableScrollPhysics(),
-            child: Padding(
-                  padding: const EdgeInsets.only(right: 24, left: 23),
-                  child: Column(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Padding(
+          padding: const EdgeInsets.only(right: 24, left: 23),
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
@@ -51,9 +51,9 @@ class ChatPage extends StatelessWidget {
                 ),
               )
             ],
-                  ),
-                ),
-          )),
+          ),
+        ),
+      )),
     );
   }
 
@@ -113,7 +113,7 @@ class ChatPage extends StatelessWidget {
 
   Widget chatContent(context) {
     return Container(
-      height: height(context) / 1.67,
+      height: height(context) / 1.7,
     );
   }
 
@@ -124,12 +124,14 @@ class ChatPage extends StatelessWidget {
         Container(
           width: 270,
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(8)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: const Color(0x26000000), width: 1)),
           child: TextFormField(
             textAlignVertical: TextAlignVertical.center,
             decoration: InputDecoration(
                 border: InputBorder.none,
-                contentPadding: EdgeInsets.only(right: 20, left: 20),
+                contentPadding: const EdgeInsets.only(right: 20, left: 20),
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: const Icon(

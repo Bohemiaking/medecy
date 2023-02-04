@@ -11,5 +11,5 @@ textApp() {
 
 textMedium() {
   return const TextStyle(
-      color: Color(0xff777777), fontSize: 12);
+      color: Color(0xff777777), fontSize: 12,);
 }

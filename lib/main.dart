@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/constants/app_constants.dart';
 import 'package:rentaroof_agent/constants/app_routes.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
+import 'package:rentaroof_agent/views/bookmark_page.dart';
 import 'package:rentaroof_agent/views/message/chat_page.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: AppConstants.appName,
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
-      home: const ChatPage(),
+      home: const BookMarkPage(),
       routes: appRoutes(context),
     );
   }
