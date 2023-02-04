@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/constants/app_assets.dart';
 import 'package:rentaroof_agent/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/app_textfield.dart';
+import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
+import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 
 import '../base/app_textunderline.dart';
 import '../base/imagetextstack_container.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   static const route = "login";
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool checkbox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -31,31 +39,105 @@ class LoginPage extends StatelessWidget {
               child: SizedBox(
                 width: width(context),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      "LOGIN",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "LOGIN",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        const AppTextUnderline(),
+                        const SizedBox(
+                          height: 28,
+                        ),
+                        AppTextField(
+                          isPassword: false,
+                          txtData: "Email id/Mobile No.",
+                          hintData: "Enter your Email id/Mobile No.",
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        AppTextField(
+                          isPassword: true,
+                          txtData: "Password",
+                          hintData: "Enter your password",
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Checkbox(
+                                    value: checkbox,
+                                    onChanged: ((value) {
+                                      setState(() {
+                                        checkbox = !checkbox;
+                                      });
+                                    })),
+                                Text(
+                                  "Remember Me",
+                                  style: textMedium().copyWith(fontSize: 14.0),
+                                )
+                              ],
+                            ),
+                            const UnderlineTextButton(
+                              txtData: "Forgot Password ?",
+                            )
+                          ],
+                        ),
+                      ],
                     ),
-                    const AppTextUnderline(),
                     const SizedBox(
-                      height: 28,
+                      height: 30,
                     ),
-                    AppTextField(
-                      isPassword: false,
-                      txtData: "Email id/Mobile No.",
-                      hintData: "Enter your Email id/Mobile No.",
+                    AppButton(
+                        height: 41.0,
+                        width: width(context) / 1,
+                        isColorFilled: true,
+                        txtdata: "Login"),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      "Or",
+                      style: textMedium().copyWith(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
-                      height: 16,
+                      height: 12,
                     ),
-                    AppTextField(
-                      isPassword: true,
-                      txtData: "Password",
-                      hintData: "Enter your password",
+                    AppButton(
+                        height: 41.0,
+                        width: width(context) / 1,
+                        isColorFilled: false,
+                        txtdata: "Request OTP"),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Don't have an account ? ",
+                          style: textMedium()
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        TextButton(
+                            onPressed: (() {}),
+                            child: Text(
+                              "Sign up",
+                              style: textApp()
+                                  .copyWith(color: const Color(0xffF47622)),
+                            ))
+                      ],
                     )
                   ],
                 ),

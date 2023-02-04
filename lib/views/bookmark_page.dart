@@ -6,6 +6,7 @@ import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_image_button.dart';
 
 import '../constants/app_theme.dart';
+import 'base/buttons/underline_text_button.dart';
 
 class BookMarkPage extends StatelessWidget {
   const BookMarkPage({super.key});
@@ -107,12 +108,8 @@ class BookMarkPage extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                Text(
-                  "View Details >>",
-                  style: textMedium().copyWith(
-                      color: const Color(0xfff47622),
-                      fontWeight: FontWeight.w400,
-                      decoration: TextDecoration.underline),
+                const UnderlineTextButton(
+                  txtData: "View Details >>",
                 ),
                 const SizedBox(
                   height: 16,
