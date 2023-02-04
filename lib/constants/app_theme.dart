@@ -18,3 +18,7 @@ textMedium() {
     fontSize: 12,
   );
 }
+
+textOrange() {
+  return const TextStyle(color: Color(0xfff47622), fontSize: 20, fontWeight: FontWeight.bold);
+}

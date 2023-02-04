@@ -46,6 +46,5 @@ class SelectTextField extends StatelessWidget {
         )
       ],
     );
-    ;
   }
 }
