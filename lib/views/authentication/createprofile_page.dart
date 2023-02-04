@@ -9,15 +9,16 @@ import 'package:rentaroof_agent/views/base/textfields/select_textfield.dart';
 
 import '../base/app_textunderline.dart';
 
-class SignupCreateprofilePage extends StatefulWidget {
-  const SignupCreateprofilePage({super.key});
+class CreateProfilePage extends StatefulWidget {
+  const CreateProfilePage({super.key});
+
+  static const route = 'createprofile';
 
   @override
-  State<SignupCreateprofilePage> createState() =>
-      _SignupCreateprofilePageState();
+  State<CreateProfilePage> createState() => _CreateProfilePageState();
 }
 
-class _SignupCreateprofilePageState extends State<SignupCreateprofilePage> {
+class _CreateProfilePageState extends State<CreateProfilePage> {
   // use this String variable for user type
   String? userTypeGroup;
 
