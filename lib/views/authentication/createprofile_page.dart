@@ -28,7 +28,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(context),
       body: SizedBox(
           height: height(context),
           child: SafeArea(

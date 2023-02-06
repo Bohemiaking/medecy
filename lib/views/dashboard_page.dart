@@ -158,6 +158,9 @@ class DashboardPage extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(AppAssets.userAvatar),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Text(
                     "Ankit Kumar",
                     style: textMedium().copyWith(
@@ -176,6 +179,9 @@ class DashboardPage extends StatelessWidget {
                 children: const [
                   UnderlineTextButton(
                     txtData: "Reschedule Visit",
+                  ),
+                  SizedBox(
+                    height: 8,
                   ),
                   UnderlineTextButton(
                     txtData: "Cancel Visit",
