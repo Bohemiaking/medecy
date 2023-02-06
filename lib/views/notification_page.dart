@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/constants/app_dimensions.dart';
-import 'package:rentaroof_agent/constants/app_theme.dart';
+import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 
 class NotificationPage extends StatelessWidget {

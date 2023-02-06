@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rentaroof_agent/constants/app_assets.dart';
-import 'package:rentaroof_agent/constants/app_routes.dart';
+import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
+import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/views/bookmark_page.dart';
 import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';

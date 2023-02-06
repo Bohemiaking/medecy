@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../constants/app_assets.dart';
-import '../../constants/app_dimensions.dart';
-import '../../constants/app_theme.dart';
+import '../../controllers/constants/app_assets.dart';
+import '../../controllers/constants/app_dimensions.dart';
+import '../../controllers/constants/app_theme.dart';
 import '../base/app_bar.dart';
 
 class ChatPage extends StatelessWidget {
