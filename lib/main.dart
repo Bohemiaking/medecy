@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: AppConstants.appName,
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
-      home: const DashboardPage(),
+      home: const LoginPage(),
       routes: appRoutes(context),
     );
   }
