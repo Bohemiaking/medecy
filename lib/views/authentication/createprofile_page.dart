@@ -4,11 +4,10 @@ import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/authentication/login_page.dart';
 import 'package:rentaroof_agent/views/authentication/signup_page.dart';
-import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
+import 'package:rentaroof_agent/views/base/textfields/app_dropdown.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
-import 'package:rentaroof_agent/views/base/textfields/select_textfield.dart';
 
 import '../base/app_textunderline.dart';
 
@@ -24,6 +23,16 @@ class CreateProfilePage extends StatefulWidget {
 class _CreateProfilePageState extends State<CreateProfilePage> {
   // use this String variable for user type
   String? userTypeGroup;
+
+  List categoryItems = [
+    "Individual",
+    "Company",
+    "Housewives",
+    "Student",
+    "Other"
+  ];
+
+  String? categoryChoosed;
 
   @override
   Widget build(BuildContext context) {
@@ -78,28 +87,11 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                         const SizedBox(
                           height: 16,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.only(right: 8),
-                                child: SelectTextField(
-                                  txtData: "Gender",
-                                  hintText: "Select",
-                                ),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.only(left: 8),
-                                child: SelectTextField(
-                                  txtData: "DOB",
-                                  hintText: "Select",
-                                ),
-                              ),
-                            )
-                          ],
+                        AppDropDown(
+                          items: categoryItems,
+                          hintText: "Select",
+                          value: categoryChoosed,
+                          txtData: "Category",
                         ),
                         const SizedBox(
                           height: 16,
@@ -108,14 +100,6 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                           isPassword: false,
                           txtData: "Email id",
                           hintData: "Enter your Email id",
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        AppTextField(
-                          isPassword: false,
-                          txtData: "Occupation",
-                          hintData: "Enter your Occupation",
                         ),
                         const SizedBox(
                           height: 24,
@@ -170,6 +154,7 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
             onChanged: ((value) {
               setState(() {
                 userTypeGroup = value.toString();
+                print("Selected Role ===> $userTypeGroup");
               });
             })),
         Text(
