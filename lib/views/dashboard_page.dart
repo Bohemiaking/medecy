@@ -3,6 +3,7 @@ import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 
 import 'package:rentaroof_agent/views/base/app_bar.dart';
+import 'package:rentaroof_agent/views/base/app_drawer.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 
 import '../controllers/constants/app_theme.dart';
@@ -16,6 +17,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
+      endDrawer: const AppDrawer(),
       body: SizedBox(
         height: height(context),
         child: SafeArea(
@@ -46,7 +48,7 @@ class DashboardPage extends StatelessWidget {
                                 crossAxisCount: 2,
                                 crossAxisSpacing: 22,
                                 mainAxisSpacing: 25,
-                                mainAxisExtent: 100),
+                                mainAxisExtent: 130),
                         children: [
                           dbinfoContainer("3", "Total Listed Properties"),
                           dbinfoContainer("3", "Pending Documentation"),

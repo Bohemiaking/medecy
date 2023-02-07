@@ -63,14 +63,18 @@ appBar(BuildContext context) {
             const SizedBox(
               width: 3,
             ),
-            IconButton(
-              onPressed: (() {}),
-              icon: const Icon(
-                Icons.menu,
-                color: Color(0xffF47622),
-                size: 25,
-              ),
-              splashRadius: 20,
+            Builder(
+              builder: (context) {
+                return IconButton(
+                  onPressed: () => Scaffold.of(context).openEndDrawer(),
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Color(0xffF47622),
+                    size: 25,
+                  ),
+                  splashRadius: 20,
+                );
+              }
             )
           ],
         ),
