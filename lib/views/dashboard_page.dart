@@ -11,8 +11,6 @@ import '../controllers/constants/app_theme.dart';
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
 
-  static const route = 'dashboard';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

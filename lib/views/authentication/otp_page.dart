@@ -15,8 +15,6 @@ import '../base/app_textunderline.dart';
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
 
-  static const route = 'otp';
-
   @override
   State<OtpPage> createState() => _OtpPageState();
 }
@@ -111,7 +109,8 @@ class _OtpPageState extends State<OtpPage> {
                                 otpText = "";
                               });
                               log("otpText : $otpText");
-                              appNavigation(context, DashboardPage.route);
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, "dashboard", (route) => false);
                             },
                           ),
                           const SizedBox(

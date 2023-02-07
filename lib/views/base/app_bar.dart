@@ -23,7 +23,8 @@ appBar(BuildContext context) {
           children: [
             InkWell(
                 onTap: () {
-                  appNavigation(context, BookMarkPage.route);
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, 'bookmark', (route) => false);
                 },
                 borderRadius: BorderRadius.circular(20),
                 child: SvgPicture.asset(AppAssets.heartIcon, height: 40)),
@@ -32,7 +33,7 @@ appBar(BuildContext context) {
             ),
             InkWell(
               onTap: () {
-                appNavigation(context, MessagePage.route);
+Navigator.pushNamedAndRemoveUntil(context, 'message', (route) => false);
               },
               borderRadius: BorderRadius.circular(20),
               child: SvgPicture.asset(
@@ -45,7 +46,8 @@ appBar(BuildContext context) {
             ),
             InkWell(
               onTap: () {
-                appNavigation(context, NotificationPage.route);
+                Navigator.pushNamedAndRemoveUntil(
+                    context, 'notification', (route) => false);
               },
               borderRadius: BorderRadius.circular(20),
               child: SvgPicture.asset(
@@ -63,19 +65,17 @@ appBar(BuildContext context) {
             const SizedBox(
               width: 3,
             ),
-            Builder(
-              builder: (context) {
-                return IconButton(
-                  onPressed: () => Scaffold.of(context).openEndDrawer(),
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Color(0xffF47622),
-                    size: 25,
-                  ),
-                  splashRadius: 20,
-                );
-              }
-            )
+            Builder(builder: (context) {
+              return IconButton(
+                onPressed: () => Scaffold.of(context).openEndDrawer(),
+                icon: const Icon(
+                  Icons.menu,
+                  color: Color(0xffF47622),
+                  size: 25,
+                ),
+                splashRadius: 20,
+              );
+            })
           ],
         ),
       )

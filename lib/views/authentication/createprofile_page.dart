@@ -14,8 +14,6 @@ import '../base/app_textunderline.dart';
 class CreateProfilePage extends StatefulWidget {
   const CreateProfilePage({super.key});
 
-  static const route = 'createprofile';
-
   @override
   State<CreateProfilePage> createState() => _CreateProfilePageState();
 }
@@ -108,8 +106,8 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                           height: 24,
                         ),
                         AppButton(
-                            onTap: () =>
-                                appNavigationPop(context, SignupPage.route),
+                            onTap: () => Navigator.pushNamedAndRemoveUntil(
+                                context, "signup", (route) => false),
                             height: 41.0,
                             width: width(context) / 1,
                             isColorFilled: true,
@@ -127,7 +125,8 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                             ),
                             TextButton(
                                 onPressed: () =>
-                                    appNavigation(context, LoginPage.route),
+                                    Navigator.pushNamedAndRemoveUntil(
+                                        context, 'login', (route) => false),
                                 child: Text(
                                   "Log in",
                                   style: textApp()

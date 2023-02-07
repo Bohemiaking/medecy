@@ -13,8 +13,6 @@ import '../base/app_textunderline.dart';
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
 
-  static const route = 'signup';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,7 +84,7 @@ class SignupPage extends StatelessWidget {
                             ),
                             TextButton(
                                 onPressed: () =>
-                                    appNavigation(context, LoginPage.route),
+                                    Navigator.pushNamedAndRemoveUntil(context, "login", (route) => false),
                                 child: Text(
                                   "Log in",
                                   style: textApp()

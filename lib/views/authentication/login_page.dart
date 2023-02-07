@@ -13,8 +13,6 @@ import '../base/imagetextstack.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
-  static const route = "login";
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -105,8 +103,8 @@ class _LoginPageState extends State<LoginPage> {
                         height: 30,
                       ),
                       AppButton(
-                          onTap: () =>
-                              appNavigation(context, OtpPage.route),
+                          onTap: () => Navigator.pushNamedAndRemoveUntil(
+                              context, 'otp', (route) => false),
                           height: 41.0,
                           width: width(context) / 1,
                           isColorFilled: true,
@@ -139,8 +137,9 @@ class _LoginPageState extends State<LoginPage> {
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
                           TextButton(
-                              onPressed: () => appNavigation(
-                                  context, CreateProfilePage.route),
+                              onPressed: () =>
+                                  Navigator.pushNamedAndRemoveUntil(context,
+                                      "createprofile", (route) => false),
                               child: Text(
                                 "Sign up",
                                 style: textApp()
