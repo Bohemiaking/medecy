@@ -7,7 +7,8 @@ import '../../../controllers/constants/app_theme.dart';
 class SelectTextField extends StatelessWidget {
   final txtData;
   final onPressed;
-  const SelectTextField({super.key, this.txtData, this.onPressed});
+  final String hintText;
+  const SelectTextField({super.key, this.txtData, this.onPressed, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class SelectTextField extends StatelessWidget {
             decoration: InputDecoration(
                 contentPadding: const EdgeInsets.only(left: 15, right: 15),
                 border: InputBorder.none,
-                hintText: "Select",
+                hintText: hintText,
                 hintStyle: textMedium().copyWith(fontSize: 13.0),
                 suffixIcon: IconButton(
                   icon: const Icon(

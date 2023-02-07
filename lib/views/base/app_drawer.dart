@@ -114,7 +114,11 @@ class AppDrawer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Icon(Icons.dashboard),
+            const Icon(
+              Icons.dashboard,
+              color: Colors.white,
+              size: 30,
+            ),
             Text(
               "Dashboard",
               style: textWhite(),

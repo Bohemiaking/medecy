@@ -4,8 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData appTheme() => ThemeData(
     fontFamily: GoogleFonts.poppins().fontFamily,
     primarySwatch: Colors.orange,
-    splashColor: Colors.orange.shade200,
-    iconTheme: const IconThemeData(color: Colors.white, size: 30));
+    splashColor: Colors.orange.shade200);
 
 textApp() {
   return const TextStyle(

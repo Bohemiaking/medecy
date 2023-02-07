@@ -86,6 +86,7 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                                 padding: EdgeInsets.only(right: 8),
                                 child: SelectTextField(
                                   txtData: "Gender",
+                                  hintText: "Select",
                                 ),
                               ),
                             ),
@@ -94,6 +95,7 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
                                 padding: EdgeInsets.only(left: 8),
                                 child: SelectTextField(
                                   txtData: "DOB",
+                                  hintText: "Select",
                                 ),
                               ),
                             )

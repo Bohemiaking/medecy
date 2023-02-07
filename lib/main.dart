@@ -3,6 +3,7 @@ import 'package:rentaroof_agent/controllers/constants/app_constants.dart';
 import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/authentication/login_page.dart';
+import 'package:rentaroof_agent/views/complaints_page.dart';
 import 'package:rentaroof_agent/views/dashboard_page.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: AppConstants.appName,
       theme: appTheme(),
       debugShowCheckedModeBanner: false,
-      home: const DashboardPage(),
+      home: const ComplaintsPage(),
       routes: appRoutes(context),
     );
   }
