@@ -4,7 +4,6 @@ import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/authentication/createprofile_page.dart';
 import 'package:rentaroof_agent/views/authentication/otp_page.dart';
-import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';

@@ -17,4 +17,8 @@ class AppAssets {
   static const sofaIcon = "assets/images/sofaIcon.png";
   static const userAvatar = "assets/images/userAvatar.png";
   static const houseVisitsIcon = "assets/images/houseVisitsIcon.svg";
+  static const applicationIcon = "assets/images/applicationIcon.svg";
+  static const howtouseIcon = "assets/images/howtouseIcon.svg";
+  static const referafriendIcon = "assets/images/referafriendIcon.svg";
+  static const transactionIcon = "assets/images/transactionIcon.svg";
 }
