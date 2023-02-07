@@ -5,7 +5,7 @@ import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/authentication/login_page.dart';
 import 'package:rentaroof_agent/views/authentication/signup_page.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
-import 'package:rentaroof_agent/views/base/textfields/app_dropdown.dart';
+import 'package:rentaroof_agent/views/base/app_dropdown.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
 
@@ -33,6 +33,9 @@ class _CreateProfilePageState extends State<CreateProfilePage> {
   ];
 
   String? categoryChoosed;
+
+  TextEditingController name = TextEditingController();
+  TextEditingController email = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

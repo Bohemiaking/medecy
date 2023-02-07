@@ -37,7 +37,11 @@ class _AppTextFieldState extends State<AppTextField> {
               borderRadius: BorderRadius.circular(8)),
           child: TextFormField(
             textAlignVertical: TextAlignVertical.center,
-            obscureText: obscure ? false : true,
+            obscureText: widget.isPassword
+                ? obscure
+                    ? false
+                    : true
+                : false,
             decoration: InputDecoration(
                 contentPadding: const EdgeInsets.only(left: 15, right: 15),
                 border: InputBorder.none,

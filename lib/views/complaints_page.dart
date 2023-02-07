@@ -5,7 +5,7 @@ import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/app_drawer.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
-import 'package:rentaroof_agent/views/base/textfields/app_dropdown.dart';
+import 'package:rentaroof_agent/views/base/app_dropdown.dart';
 
 import '../controllers/constants/app_theme.dart';
 

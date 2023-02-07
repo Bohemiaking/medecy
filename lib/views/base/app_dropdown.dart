@@ -1,7 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
-import '../../../controllers/constants/app_dimensions.dart';
-import '../../../controllers/constants/app_theme.dart';
+import '../../controllers/constants/app_dimensions.dart';
+import '../../controllers/constants/app_theme.dart';
 
 class AppDropDown extends StatefulWidget {
   final List items;
@@ -50,7 +52,7 @@ class _AppDropDownState extends State<AppDropDown> {
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
                       valueItem,
-                      style: textMedium().copyWith(fontSize: 13.0),
+                      style: textOrange().copyWith(fontSize: 13.0),
                     ),
                   ));
             }).toList(),
