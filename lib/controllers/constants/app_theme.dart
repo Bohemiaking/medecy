@@ -32,3 +32,8 @@ text5c5c5c() {
   return const TextStyle(
       color: Color(0xff5c5c5c), fontSize: 12, fontWeight: FontWeight.bold);
 }
+
+textGreen() {
+  return const TextStyle(
+      color: Colors.green, fontSize: 14, fontWeight: FontWeight.bold);
+}

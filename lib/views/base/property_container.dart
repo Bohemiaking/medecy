@@ -7,8 +7,8 @@ import '../../controllers/constants/app_theme.dart';
 import 'buttons/app_button.dart';
 import 'buttons/underline_text_button.dart';
 
-class PropertyContainer extends StatelessWidget {
-  const PropertyContainer({super.key});
+class Property extends StatelessWidget {
+  const Property({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +48,7 @@ class PropertyContainer extends StatelessWidget {
                     ),
                     AppButton(
                         height: 30.0,
+                        color: Colors.orange,
                         width: 110,
                         isColorFilled: false,
                         txtdata: "1034 sq.ft ⌄")

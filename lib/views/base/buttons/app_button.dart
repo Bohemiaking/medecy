@@ -7,6 +7,7 @@ class AppButton extends StatelessWidget {
   double height;
   double width;
   final onTap;
+  final color;
   bool isColorFilled;
   String txtdata;
   AppButton(
@@ -15,7 +16,8 @@ class AppButton extends StatelessWidget {
       required this.width,
       this.onTap,
       required this.isColorFilled,
-      required this.txtdata});
+      required this.txtdata,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,7 @@ class AppButton extends StatelessWidget {
             color: isColorFilled
                 ? const Color(0xffF47622)
                 : const Color(0xfff9f9f9),
-            border: isColorFilled
-                ? null
-                : Border.all(color: const Color(0xffF47622), width: 1)),
+            border: isColorFilled ? null : Border.all(color: color, width: 1)),
         child: Padding(
           padding: const EdgeInsets.all(5.0),
           child: Center(
