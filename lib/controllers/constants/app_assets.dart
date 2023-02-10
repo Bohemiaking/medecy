@@ -21,4 +21,8 @@ class AppAssets {
   static const howtouseIcon = "assets/images/howtouseIcon.svg";
   static const referafriendIcon = "assets/images/referafriendIcon.svg";
   static const transactionIcon = "assets/images/transactionIcon.svg";
+  static const girlPhoto = "assets/images/girlPhoto.png";
+  static const boyPhoto = "assets/images/boyPhoto.png";
+  static const copyIcon = "assets/images/copy.svg";
+  static const shareIcon = "assets/images/Share_Android.svg";
 }

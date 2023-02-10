@@ -32,11 +32,21 @@ class AppDrawer extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              drawerTiles(AppAssets.houseVisitsIcon, "House Visits"),
-              drawerTiles(AppAssets.applicationIcon, "Applications"),
-              drawerTiles(AppAssets.transactionIcon, "Transactions"),
-              drawerTiles(AppAssets.howtouseIcon, "How to use?"),
-              drawerTiles(AppAssets.referafriendIcon, "Refer A Friend"),
+              drawerTiles(AppAssets.houseVisitsIcon, "House Visits", () {
+                Navigator.pushNamed(context, 'refer');
+              }),
+              drawerTiles(AppAssets.applicationIcon, "Applications", () {
+                Navigator.pushNamed(context, 'refer');
+              }),
+              drawerTiles(AppAssets.transactionIcon, "Transactions", () {
+                Navigator.pushNamed(context, 'refer');
+              }),
+              drawerTiles(AppAssets.howtouseIcon, "How to use?", () {
+                Navigator.pushNamed(context, 'refer');
+              }),
+              drawerTiles(AppAssets.referafriendIcon, "Refer A Friend", () {
+                Navigator.pushNamed(context, 'refer');
+              })
             ],
           ),
         ),
@@ -141,21 +151,24 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  Widget drawerTiles(svgPath, txtdata) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 45.9, right: 84, bottom: 54),
-      child: Row(
-        children: [
-          SvgPicture.asset(svgPath),
-          const SizedBox(
-            width: 34.67,
-          ),
-          Text(
-            txtdata,
-            style: textWhite().copyWith(
-                color: Color(0xff2C2C2C), fontWeight: FontWeight.w100),
-          )
-        ],
+  Widget drawerTiles(svgPath, txtdata, onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 45.9, right: 84, bottom: 54),
+        child: Row(
+          children: [
+            SvgPicture.asset(svgPath),
+            const SizedBox(
+              width: 34.67,
+            ),
+            Text(
+              txtdata,
+              style: textWhite().copyWith(
+                  color: Color(0xff2C2C2C), fontWeight: FontWeight.w100),
+            )
+          ],
+        ),
       ),
     );
   }

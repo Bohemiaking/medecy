@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: const LoginPage(),
         onGenerateRoute: Routes.onGenerateRoute,
-        initialRoute: 'refer',
+        initialRoute: 'dashboard',
       ),
     );
   }
