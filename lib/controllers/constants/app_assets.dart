@@ -25,4 +25,7 @@ class AppAssets {
   static const boyPhoto = "assets/images/boyPhoto.png";
   static const copyIcon = "assets/images/copy.svg";
   static const shareIcon = "assets/images/Share_Android.svg";
+  static const howtouse = "assets/images/howtouse.png";
+  static const howtouse1 = "assets/images/howtouse1.png";
+  static const downloadIcon = "assets/images/downloadIcon.svg";
 }

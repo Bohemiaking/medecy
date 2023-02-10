@@ -42,7 +42,7 @@ class AppDrawer extends StatelessWidget {
                 Navigator.pushNamed(context, 'refer');
               }),
               drawerTiles(AppAssets.howtouseIcon, "How to use?", () {
-                Navigator.pushNamed(context, 'refer');
+                Navigator.pushNamed(context, 'howtouse');
               }),
               drawerTiles(AppAssets.referafriendIcon, "Refer A Friend", () {
                 Navigator.pushNamed(context, 'refer');

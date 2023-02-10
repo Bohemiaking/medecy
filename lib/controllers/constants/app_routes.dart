@@ -7,6 +7,7 @@ import 'package:rentaroof_agent/views/authentication/otp_page.dart';
 import 'package:rentaroof_agent/views/authentication/signup_page.dart';
 import 'package:rentaroof_agent/views/bookmark_page.dart';
 import 'package:rentaroof_agent/views/dashboard_page.dart';
+import 'package:rentaroof_agent/views/howtouse_page.dart';
 import 'package:rentaroof_agent/views/message/chat_page.dart';
 import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
@@ -66,6 +67,9 @@ class Routes {
 
       case 'refer':
         return MaterialPageRoute(builder: (context) => ReferfriendPage());
+
+      case 'howtouse':
+        return MaterialPageRoute(builder: (context) => HowtoUsePage());
     }
   }
 }
