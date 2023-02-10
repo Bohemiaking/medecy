@@ -2,69 +2,58 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
+import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 
 import '../../controllers/constants/app_theme.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar(context),
-      body: SizedBox(
-        height: height(context),
-        child: SafeArea(
-            child: SingleChildScrollView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          child: Padding(
-            padding: const EdgeInsets.only(right: 24, left: 23),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Messages",
-                  style: textApp(),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                Container(
-                  height: height(context) / 1.4,
-                  width: width(context) / 0.9,
-                  decoration: BoxDecoration(
-                      color: const Color(0xffD9E9FE),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: SingleChildScrollView(
-                      physics: const AlwaysScrollableScrollPhysics(),
-                      child: Column(
-                        children: [
-                          messageSearch(),
-                          const SizedBox(
-                            height: 26,
-                          ),
-                          ListView.builder(
-                              physics: const NeverScrollableScrollPhysics(),
-                              shrinkWrap: true,
-                              itemCount: 20,
-                              itemBuilder: ((context, index) {
-                                return messageContainer();
-                              }))
-                        ],
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
+    return AppScaffold(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 24,
           ),
-        )),
+          Text(
+            "Messages",
+            style: textApp(),
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          Container(
+            height: height(context) / 1.4,
+            width: width(context) / 0.9,
+            decoration: BoxDecoration(
+                color: const Color(0xffD9E9FE),
+                borderRadius: BorderRadius.circular(12)),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(),
+                child: Column(
+                  children: [
+                    messageSearch(),
+                    const SizedBox(
+                      height: 26,
+                    ),
+                    ListView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 20,
+                        itemBuilder: ((context, index) {
+                          return messageContainer();
+                        }))
+                  ],
+                ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

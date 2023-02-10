@@ -13,6 +13,8 @@ import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
 import 'package:rentaroof_agent/views/referfriend_page.dart';
 
+import '../../views/HouseVisitPage.dart';
+
 class Routes {
   static Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -70,6 +72,9 @@ class Routes {
 
       case 'howtouse':
         return MaterialPageRoute(builder: (context) => HowtoUsePage());
+
+      case 'housevisits':
+        return MaterialPageRoute(builder: (context) => HouseVisitPage());
     }
   }
 }

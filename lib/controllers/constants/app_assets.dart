@@ -28,4 +28,6 @@ class AppAssets {
   static const howtouse = "assets/images/howtouse.png";
   static const howtouse1 = "assets/images/howtouse1.png";
   static const downloadIcon = "assets/images/downloadIcon.svg";
+  static const womenProfile = "assets/images/womenProfile.png";
+  static const chatICon = "assets/images/Chat_Circle_Dots.svg";
 }

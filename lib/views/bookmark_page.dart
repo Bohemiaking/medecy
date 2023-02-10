@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
+import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_image_button.dart';
 
@@ -11,42 +12,30 @@ import 'base/buttons/underline_text_button.dart';
 class BookMarkPage extends StatelessWidget {
   const BookMarkPage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar(context),
-      body: SizedBox(
-        height: height(context),
-        child: SafeArea(
-            child: SingleChildScrollView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          child: Padding(
-            padding: const EdgeInsets.only(right: 24, left: 23),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Bookmarks",
-                  style: textApp(),
-                ),
-                const SizedBox(
-                  height: 32,
-                ),
-                ListView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 2,
-                    itemBuilder: ((context, index) {
-                      return bookmarkedContainer(context);
-                    }))
-              ],
-            ),
+    return AppScaffold(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 24,
           ),
-        )),
+          Text(
+            "Bookmarks",
+            style: textApp(),
+          ),
+          const SizedBox(
+            height: 32,
+          ),
+          ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 2,
+              itemBuilder: ((context, index) {
+                return bookmarkedContainer(context);
+              }))
+        ],
       ),
     );
   }

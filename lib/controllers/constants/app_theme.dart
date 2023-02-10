@@ -24,6 +24,11 @@ textOrange() {
 }
 
 textWhite() {
-return const TextStyle(
+  return const TextStyle(
       color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold);
+}
+
+text5c5c5c() {
+  return const TextStyle(
+      color: Color(0xff5c5c5c), fontSize: 12, fontWeight: FontWeight.bold);
 }

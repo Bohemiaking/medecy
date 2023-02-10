@@ -28,12 +28,14 @@ class AppDrawer extends StatelessWidget {
                 ),
               ),
               profileInfo(),
-              dashboardTile(),
+              dashboardTile(() {
+                Navigator.pushNamed(context, 'dashboard');
+              }),
               const SizedBox(
                 height: 50,
               ),
               drawerTiles(AppAssets.houseVisitsIcon, "House Visits", () {
-                Navigator.pushNamed(context, 'refer');
+                Navigator.pushNamed(context, 'housevisits');
               }),
               drawerTiles(AppAssets.applicationIcon, "Applications", () {
                 Navigator.pushNamed(context, 'refer');
@@ -111,41 +113,44 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  Widget dashboardTile() {
-    return Container(
-      height: 52,
-      width: 248,
-      decoration: const BoxDecoration(
-          color: Color(0xfff47622),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            bottomLeft: Radius.circular(30),
-          )),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 29.46),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Icon(
-              Icons.dashboard,
-              color: Colors.white,
-              size: 30,
-            ),
-            Text(
-              "Dashboard",
-              style: textWhite(),
-            ),
-            Container(
-              height: 35.18,
-              width: 5.28,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    bottomLeft: Radius.circular(30),
-                  )),
-            )
-          ],
+  Widget dashboardTile(onTap) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 52,
+        width: 248,
+        decoration: const BoxDecoration(
+            color: Color(0xfff47622),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
+            )),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 29.46),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Icon(
+                Icons.dashboard,
+                color: Colors.white,
+                size: 30,
+              ),
+              Text(
+                "Dashboard",
+                style: textWhite(),
+              ),
+              Container(
+                height: 35.18,
+                width: 5.28,
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      bottomLeft: Radius.circular(30),
+                    )),
+              )
+            ],
+          ),
         ),
       ),
     );
