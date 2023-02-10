@@ -38,7 +38,7 @@ class AppDrawer extends StatelessWidget {
                 Navigator.pushNamed(context, 'housevisits');
               }),
               drawerTiles(AppAssets.applicationIcon, "Applications", () {
-                Navigator.pushNamed(context, 'refer');
+                Navigator.pushNamed(context, 'applications');
               }),
               drawerTiles(AppAssets.transactionIcon, "Transactions", () {
                 Navigator.pushNamed(context, 'refer');

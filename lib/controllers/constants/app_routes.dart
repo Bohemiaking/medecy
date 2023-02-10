@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rentaroof_agent/controllers/cubits/auth/auth_cubit.dart';
+import 'package:rentaroof_agent/views/applications_page.dart';
 import 'package:rentaroof_agent/views/authentication/createprofile_page.dart';
 import 'package:rentaroof_agent/views/authentication/login_page.dart';
 import 'package:rentaroof_agent/views/authentication/otp_page.dart';
@@ -75,6 +76,9 @@ class Routes {
 
       case 'housevisits':
         return MaterialPageRoute(builder: (context) => HouseVisitPage());
+
+      case 'applications':
+        return MaterialPageRoute(builder: (context) => ApplicationPage());
     }
   }
 }
