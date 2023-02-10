@@ -76,6 +76,7 @@ class BookMarkPage extends StatelessWidget {
                       width: 12,
                     ),
                     AppButton(
+                        color: Colors.orange,
                         height: 30.0,
                         width: 110,
                         isColorFilled: false,
@@ -148,11 +149,13 @@ class BookMarkPage extends StatelessWidget {
                         height: 49.0,
                         width: 152.0,
                         isColorFilled: true,
+                        color: Colors.orange,
                         txtdata: "Reschedule"),
                     AppButton(
                         height: 49.0,
                         width: 152.0,
                         isColorFilled: false,
+                        color: Colors.orange,
                         txtdata: "Cancel Visit"),
                   ],
                 )

@@ -39,11 +39,13 @@ class ReferfriendPage extends StatelessWidget {
                 height: 43.0,
                 width: 79.0,
                 isColorFilled: false,
+                color: Color(0xff777777),
                 txtdata: "Invited"),
             horizontalSpace(10.0),
             AppButton(
                 height: 43.0,
                 width: 100.0,
+                color: Colors.orange,
                 isColorFilled: false,
                 txtdata: "Accepted")
           ],

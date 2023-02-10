@@ -41,7 +41,7 @@ class AppDrawer extends StatelessWidget {
                 Navigator.pushNamed(context, 'applications');
               }),
               drawerTiles(AppAssets.transactionIcon, "Transactions", () {
-                Navigator.pushNamed(context, 'refer');
+                Navigator.pushNamed(context, 'transactions');
               }),
               drawerTiles(AppAssets.howtouseIcon, "How to use?", () {
                 Navigator.pushNamed(context, 'howtouse');

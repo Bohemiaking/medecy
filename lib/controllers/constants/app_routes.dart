@@ -13,6 +13,7 @@ import 'package:rentaroof_agent/views/message/chat_page.dart';
 import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
 import 'package:rentaroof_agent/views/referfriend_page.dart';
+import 'package:rentaroof_agent/views/transaction_page.dart';
 
 import '../../views/HouseVisitPage.dart';
 
@@ -79,6 +80,9 @@ class Routes {
 
       case 'applications':
         return MaterialPageRoute(builder: (context) => ApplicationPage());
+
+      case 'transactions':
+        return MaterialPageRoute(builder: (context) => TransactionPage());
     }
   }
 }

@@ -20,7 +20,7 @@ class DashboardPage extends StatelessWidget {
         height: height(context),
         child: SafeArea(
           child: SingleChildScrollView(
-              physics: const AlwaysScrollableScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: SizedBox(
                 width: width(context),
                 child: Padding(
