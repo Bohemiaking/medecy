@@ -8,8 +8,15 @@ class AppTextField extends StatefulWidget {
   final txtData;
   final hintData;
   bool isPassword;
+  final validator;
+  final controller;
   AppTextField(
-      {super.key, this.txtData, this.hintData, required this.isPassword});
+      {super.key,
+      this.txtData,
+      this.hintData,
+      required this.isPassword,
+      this.validator,
+      this.controller});
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -36,6 +43,8 @@ class _AppTextFieldState extends State<AppTextField> {
               border: Border.all(color: Colors.black12, width: 1.5),
               borderRadius: BorderRadius.circular(8)),
           child: TextFormField(
+            controller: widget.controller,
+            validator: widget.validator,
             textAlignVertical: TextAlignVertical.center,
             obscureText: widget.isPassword
                 ? obscure

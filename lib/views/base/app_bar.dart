@@ -33,7 +33,8 @@ appBar(BuildContext context) {
             ),
             InkWell(
               onTap: () {
-Navigator.pushNamedAndRemoveUntil(context, 'message', (route) => false);
+                Navigator.pushNamedAndRemoveUntil(
+                    context, 'message', (route) => false);
               },
               borderRadius: BorderRadius.circular(20),
               child: SvgPicture.asset(

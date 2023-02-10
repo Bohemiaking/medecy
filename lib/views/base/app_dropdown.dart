@@ -10,12 +10,14 @@ class AppDropDown extends StatefulWidget {
   Object? value;
   final String hintText;
   final String txtData;
+  final onChanged;
   AppDropDown(
       {super.key,
       required this.items,
       required this.value,
       required this.hintText,
-      required this.txtData});
+      required this.txtData,
+      this.onChanged});
 
   @override
   State<AppDropDown> createState() => _AppDropDownState();
@@ -56,12 +58,7 @@ class _AppDropDownState extends State<AppDropDown> {
                     ),
                   ));
             }).toList(),
-            onChanged: (newValue) {
-              setState(() {
-                widget.value = newValue;
-                print("Selected Category ===> ${widget.value}");
-              });
-            },
+            onChanged: widget.onChanged,
             value: widget.value,
           ),
         ),

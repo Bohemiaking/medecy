@@ -11,7 +11,6 @@ import 'base/buttons/underline_text_button.dart';
 class BookMarkPage extends StatelessWidget {
   const BookMarkPage({super.key});
 
-  static const route = 'bookmark';
 
   @override
   Widget build(BuildContext context) {

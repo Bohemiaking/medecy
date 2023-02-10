@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/controllers/repositories/user_authentication_repo.dart';
 import 'package:rentaroof_agent/views/authentication/createprofile_page.dart';
 import 'package:rentaroof_agent/views/authentication/otp_page.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
@@ -19,6 +20,13 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool checkbox = false;
+
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
+
+  UserAuthRepo userAuthRepo = UserAuthRepo();
 
   @override
   Widget build(BuildContext context) {
@@ -41,70 +49,89 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "LOGIN",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          AppTextUnderline(
-                            width: 48.0,
-                          ),
-                          const SizedBox(
-                            height: 28,
-                          ),
-                          AppTextField(
-                            isPassword: false,
-                            txtData: "Email id/Mobile No.",
-                            hintData: "Enter your Email id/Mobile No.",
-                          ),
-                          const SizedBox(
-                            height: 16,
-                          ),
-                          AppTextField(
-                            isPassword: true,
-                            txtData: "Password",
-                            hintData: "Enter your password",
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Checkbox(
-                                      value: checkbox,
-                                      onChanged: ((value) {
-                                        setState(() {
-                                          checkbox = !checkbox;
-                                        });
-                                      })),
-                                  Text(
-                                    "Remember Me",
-                                    style:
-                                        textMedium().copyWith(fontSize: 14.0),
-                                  )
-                                ],
-                              ),
-                              const UnderlineTextButton(
-                                txtData: "Forgot Password ?",
-                              )
-                            ],
-                          ),
-                        ],
+                      Form(
+                        key: _formKey,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              "LOGIN",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            AppTextUnderline(
+                              width: 48.0,
+                            ),
+                            const SizedBox(
+                              height: 28,
+                            ),
+                            AppTextField(
+                              controller: email,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return "Please enter a email id";
+                                }
+                              },
+                              isPassword: false,
+                              txtData: "Email id/Mobile No.",
+                              hintData: "Enter your Email id/Mobile No.",
+                            ),
+                            const SizedBox(
+                              height: 16,
+                            ),
+                            AppTextField(
+                              controller: password,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return "Please enter a password";
+                                }
+                              },
+                              isPassword: true,
+                              txtData: "Password",
+                              hintData: "Enter your password",
+                            ),
+                            const SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Checkbox(
+                                        value: checkbox,
+                                        onChanged: ((value) {
+                                          setState(() {
+                                            checkbox = !checkbox;
+                                          });
+                                        })),
+                                    Text(
+                                      "Remember Me",
+                                      style:
+                                          textMedium().copyWith(fontSize: 14.0),
+                                    )
+                                  ],
+                                ),
+                                const UnderlineTextButton(
+                                  txtData: "Forgot Password ?",
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 30,
                       ),
                       AppButton(
-                          onTap: () => Navigator.pushNamedAndRemoveUntil(
-                              context, 'otp', (route) => false),
+                          onTap: () {
+                            if (_formKey.currentState!.validate()) {
+                              userAuthRepo.userLogin(
+                                  email.text, password.text, context);
+                            }
+                          },
                           height: 41.0,
                           width: width(context) / 1,
                           isColorFilled: true,

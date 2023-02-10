@@ -3,12 +3,11 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
-import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
-import 'package:rentaroof_agent/views/base/app_bar.dart';
+import 'package:rentaroof_agent/controllers/helper/helper.dart';
+import 'package:rentaroof_agent/controllers/repositories/user_authentication_repo.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
-import 'package:rentaroof_agent/views/dashboard_page.dart';
 
 import '../base/app_textunderline.dart';
 
@@ -27,6 +26,15 @@ class _OtpPageState extends State<OtpPage> {
 
   // use this string variable to post OTP for API purpose
   late String otpText;
+
+  UserAuthRepo userAuthRepo = UserAuthRepo();
+
+  Helper helper = Helper();
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -99,18 +107,14 @@ class _OtpPageState extends State<OtpPage> {
                             width: width(context) / 1,
                             isColorFilled: true,
                             txtdata: "Login",
-                            onTap: () {
+                            onTap: () async {
                               otpText = otp1_4th.text +
                                   otp2_4th.text +
                                   otp3_4th.text +
                                   otp4_4th.text;
-                              log(otpText);
-                              setState(() {
-                                otpText = "";
-                              });
                               log("otpText : $otpText");
-                              Navigator.pushNamedAndRemoveUntil(
-                                  context, "dashboard", (route) => false);
+                              var userID = await helper.getValue("userID");
+                              userAuthRepo.otpVerify(userID, otpText);
                             },
                           ),
                           const SizedBox(

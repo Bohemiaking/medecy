@@ -35,10 +35,17 @@ class Routes {
                 ));
 
       case 'signup':
+        Map<String, dynamic> arguments =
+            settings.arguments as Map<String, dynamic>;
         return MaterialPageRoute(
             builder: (context) => BlocProvider(
                   create: (context) => AuthCubit(),
-                  child: SignupPage(),
+                  child: SignupPage(
+                    name: arguments['name'],
+                    email: arguments['email'],
+                    role: arguments['role'],
+                    category: arguments['category'],
+                  ),
                 ));
 
       case 'dashboard':

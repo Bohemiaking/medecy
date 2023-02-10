@@ -9,8 +9,6 @@ import '../base/app_bar.dart';
 class ChatPage extends StatelessWidget {
   const ChatPage({super.key});
 
-  static const route = 'chat';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

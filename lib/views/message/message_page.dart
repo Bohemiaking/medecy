@@ -8,7 +8,6 @@ import '../../controllers/constants/app_theme.dart';
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
 
-  static const route = 'message';
 
   @override
   Widget build(BuildContext context) {
