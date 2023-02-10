@@ -14,6 +14,7 @@ import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
 import 'package:rentaroof_agent/views/profile_page.dart';
 import 'package:rentaroof_agent/views/referfriend_page.dart';
+import 'package:rentaroof_agent/views/splash.dart';
 import 'package:rentaroof_agent/views/transaction_page.dart';
 
 import '../../views/HouseVisitPage.dart';
@@ -87,6 +88,9 @@ class Routes {
 
       case 'profile':
         return MaterialPageRoute(builder: (context) => ProfilePage());
+
+      case 'splash':
+        return MaterialPageRoute(builder: (context) => Splash());
     }
   }
 }

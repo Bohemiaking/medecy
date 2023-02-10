@@ -106,6 +106,7 @@ class _OtpPageState extends State<OtpPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           AppButton(
+                            color: Colors.orange,
                             height: 41.0,
                             width: width(context) / 1,
                             isColorFilled: true,

@@ -126,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 30,
                       ),
                       AppButton(
+                        color: Colors.orange,
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
                               userAuthRepo.userLogin(
@@ -148,6 +149,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 12,
                       ),
                       AppButton(
+                        color: Colors.orange,
                           height: 41.0,
                           width: width(context) / 1,
                           isColorFilled: false,

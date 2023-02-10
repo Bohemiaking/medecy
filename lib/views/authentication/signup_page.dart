@@ -90,6 +90,7 @@ class SignupPage extends StatelessWidget {
                             height: 120,
                           ),
                           AppButton(
+                              color: Colors.orange,
                               onTap: () {
                                 if (_formKey.currentState!.validate()) {
                                   authRepo.userSignup(
