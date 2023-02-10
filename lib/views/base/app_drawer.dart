@@ -27,7 +27,11 @@ class AppDrawer extends StatelessWidget {
                   splashRadius: 20,
                 ),
               ),
-              profileInfo(),
+              profileInfo(
+                () {
+                Navigator.pushNamed(context, 'profile');
+              }
+              ),
               dashboardTile(() {
                 Navigator.pushNamed(context, 'dashboard');
               }),
@@ -56,56 +60,59 @@ class AppDrawer extends StatelessWidget {
     );
   }
 
-  Widget profileInfo() {
+  Widget profileInfo(onTap) {
     return Padding(
       padding: const EdgeInsets.only(top: 10, right: 16, bottom: 25),
-      child: Container(
-        height: 76,
-        width: 231,
-        decoration: BoxDecoration(
-            color: const Color(0xfff7f7f7),
-            border: Border.all(color: const Color(0xffebebeb), width: 2),
-            borderRadius: BorderRadius.circular(8)),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(
-                  AppAssets.defUserIcon,
-                  scale: 0.6,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Dharmendra",
-                      style: textApp(),
-                    ),
-                    const Text(
-                      "Agent",
-                      style: TextStyle(color: Color(0xffA4A4A4), fontSize: 13),
-                    ),
-                  ],
-                ),
-                Container(
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(
-                      color: const Color(0xffebebeb),
-                      borderRadius: BorderRadius.circular(8)),
-                  child: IconButton(
-                    icon: const Center(
-                        child: Icon(
-                      Icons.more_horiz,
-                      size: 20,
-                    )),
-                    onPressed: () {},
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          height: 76,
+          width: 231,
+          decoration: BoxDecoration(
+              color: const Color(0xfff7f7f7),
+              border: Border.all(color: const Color(0xffebebeb), width: 2),
+              borderRadius: BorderRadius.circular(8)),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    AppAssets.defUserIcon,
+                    scale: 0.6,
                   ),
-                )
-              ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Dharmendra",
+                        style: textApp(),
+                      ),
+                      const Text(
+                        "Agent",
+                        style: TextStyle(color: Color(0xffA4A4A4), fontSize: 13),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                        color: const Color(0xffebebeb),
+                        borderRadius: BorderRadius.circular(8)),
+                    child: IconButton(
+                      icon: const Center(
+                          child: Icon(
+                        Icons.more_horiz,
+                        size: 20,
+                      )),
+                      onPressed: () {},
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

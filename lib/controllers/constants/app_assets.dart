@@ -31,4 +31,6 @@ class AppAssets {
   static const womenProfile = "assets/images/womenProfile.png";
   static const chatICon = "assets/images/Chat_Circle_Dots.svg";
   static const greenTick = "assets/images/greenTick.svg";
+  static const pencilIcon = "assets/images/Edit_Pencil_01.svg";
+  static const imageIcon = "assets/images/Image_01.svg";
 }
