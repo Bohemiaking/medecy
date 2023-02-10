@@ -31,11 +31,15 @@ class UserAuthRepo {
     }
   }
 
-  void otpVerify(userID, otp) async {
+  void otpVerify(userID, otp, context) async {
     try {
       Response response = await api.sendRequest.post(
           "/auth/mobile-verification",
           data: {"user_id": userID, "otp": otp});
+      if (response.statusCode == 200) {
+        Navigator.pushNamedAndRemoveUntil(
+            context, "dashboard", (route) => false);
+      }
     } catch (e) {
       rethrow;
     }

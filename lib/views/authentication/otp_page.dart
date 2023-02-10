@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -5,7 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
 import 'package:rentaroof_agent/controllers/helper/helper.dart';
-import 'package:rentaroof_agent/controllers/repositories/user_authentication_repo.dart';
+import 'package:rentaroof_agent/controllers/repositories/userAuth_repo.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
 
@@ -19,6 +21,7 @@ class OtpPage extends StatefulWidget {
 }
 
 class _OtpPageState extends State<OtpPage> {
+  // texteditingcontrollers for otp
   TextEditingController otp1_4th = TextEditingController();
   TextEditingController otp2_4th = TextEditingController();
   TextEditingController otp3_4th = TextEditingController();
@@ -114,7 +117,7 @@ class _OtpPageState extends State<OtpPage> {
                                   otp4_4th.text;
                               log("otpText : $otpText");
                               var userID = await helper.getValue("userID");
-                              userAuthRepo.otpVerify(userID, otpText);
+                              userAuthRepo.otpVerify(userID, otpText, context);
                             },
                           ),
                           const SizedBox(

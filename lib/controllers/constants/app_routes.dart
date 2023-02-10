@@ -10,6 +10,7 @@ import 'package:rentaroof_agent/views/dashboard_page.dart';
 import 'package:rentaroof_agent/views/message/chat_page.dart';
 import 'package:rentaroof_agent/views/message/message_page.dart';
 import 'package:rentaroof_agent/views/notification_page.dart';
+import 'package:rentaroof_agent/views/referfriend_page.dart';
 
 class Routes {
   static Route? onGenerateRoute(RouteSettings settings) {
@@ -18,20 +19,20 @@ class Routes {
         return MaterialPageRoute(
             builder: (context) => BlocProvider(
                   create: (context) => AuthCubit(),
-                  child: LoginPage(),
+                  child: const LoginPage(),
                 ));
       case 'createprofile':
         return MaterialPageRoute(
             builder: (context) => BlocProvider(
                   create: (context) => AuthCubit(),
-                  child: CreateProfilePage(),
+                  child: const CreateProfilePage(),
                 ));
 
       case 'otp':
         return MaterialPageRoute(
             builder: (context) => BlocProvider(
                   create: (context) => AuthCubit(),
-                  child: OtpPage(),
+                  child: const OtpPage(),
                 ));
 
       case 'signup':
@@ -62,6 +63,9 @@ class Routes {
 
       case 'notification':
         return MaterialPageRoute(builder: (context) => NotificationPage());
+
+      case 'refer':
+        return MaterialPageRoute(builder: (context) => ReferfriendPage());
     }
   }
 }
