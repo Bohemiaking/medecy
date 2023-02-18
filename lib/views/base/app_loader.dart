@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 
 class AppLoader extends StatelessWidget {
   const AppLoader({super.key});

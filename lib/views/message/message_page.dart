@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_assets.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 
-import '../../controllers/constants/app_theme.dart';
+import '../../utils/constants/app_theme.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});

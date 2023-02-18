@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../controllers/constants/app_theme.dart';
+import '../../../utils/constants/app_theme.dart';
 
 class UnderlineTextButton extends StatelessWidget {
   final onTap;

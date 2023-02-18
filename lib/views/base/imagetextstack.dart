@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../controllers/constants/app_assets.dart';
-import '../../controllers/constants/app_theme.dart';
+import '../../utils/constants/app_assets.dart';
+import '../../utils/constants/app_theme.dart';
 
 class ImageTextStackContainer extends StatelessWidget {
   const ImageTextStackContainer({

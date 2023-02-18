@@ -4,8 +4,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 import 'package:rentaroof_agent/controllers/helper/helper.dart';
 import 'package:rentaroof_agent/controllers/repositories/userAuth_repo.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';

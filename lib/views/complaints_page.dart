@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/app_drawer.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/app_dropdown.dart';
 
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_theme.dart';
 
 class ComplaintsPage extends StatelessWidget {
   const ComplaintsPage({super.key});

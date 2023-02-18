@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../controllers/constants/app_dimensions.dart';
-import '../../controllers/constants/app_theme.dart';
+import '../../utils/constants/app_dimensions.dart';
+import '../../utils/constants/app_theme.dart';
 
 class AppDropDown extends StatefulWidget {
   final List items;

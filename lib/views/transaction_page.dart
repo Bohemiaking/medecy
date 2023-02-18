@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 
-import '../controllers/constants/app_dimensions.dart';
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_dimensions.dart';
+import '../utils/constants/app_theme.dart';
 import 'base/buttons/app_button.dart';
 import 'base/buttons/underline_text_button.dart';
 import 'base/enqProperty_container.dart';

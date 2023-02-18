@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 import 'package:rentaroof_agent/views/base/enqProperty_container.dart';
 import 'package:rentaroof_agent/views/base/property_container.dart';
 
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_theme.dart';
 
 class HouseVisitPage extends StatelessWidget {
   const HouseVisitPage({super.key});

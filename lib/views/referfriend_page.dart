@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_assets.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_theme.dart';
 import 'base/app_scaffold.dart';
 
 class ReferfriendPage extends StatelessWidget {

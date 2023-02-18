@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/controllers/repositories/userAuth_repo.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/imagetextstack.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';
 
-import '../../controllers/constants/app_theme.dart';
+import '../../utils/constants/app_theme.dart';
 import '../base/app_textunderline.dart';
 
 class SignupPage extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_assets.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});

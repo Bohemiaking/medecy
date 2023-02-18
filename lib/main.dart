@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rentaroof_agent/controllers/constants/app_constants.dart';
-import 'package:rentaroof_agent/controllers/constants/app_routes.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_constants.dart';
+import 'package:rentaroof_agent/utils/constants/app_routes.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 import 'package:rentaroof_agent/controllers/cubits/auth/auth_cubit.dart';
 import 'package:rentaroof_agent/views/authentication/login_page.dart';
 

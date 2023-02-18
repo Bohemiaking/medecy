@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 
 class AppTextField extends StatefulWidget {
   final txtData;

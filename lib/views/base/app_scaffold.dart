@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../controllers/constants/app_dimensions.dart';
+import '../../utils/constants/app_dimensions.dart';
 import 'app_bar.dart';
 import 'app_drawer.dart';
 

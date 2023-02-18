@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_assets.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_assets.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 
 import 'package:rentaroof_agent/views/base/app_bar.dart';
 import 'package:rentaroof_agent/views/base/app_drawer.dart';
 import 'package:rentaroof_agent/views/base/buttons/underline_text_button.dart';
 
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_theme.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});

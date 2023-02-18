@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
-import 'package:rentaroof_agent/controllers/constants/app_theme.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_theme.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/app_dropdown.dart';
 import 'package:rentaroof_agent/views/base/textfields/app_textfield.dart';

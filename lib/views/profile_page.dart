@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rentaroof_agent/controllers/constants/app_dimensions.dart';
+import 'package:rentaroof_agent/utils/constants/app_dimensions.dart';
 import 'package:rentaroof_agent/views/base/app_scaffold.dart';
 import 'package:rentaroof_agent/views/base/buttons/app_button.dart';
 import 'package:rentaroof_agent/views/base/property_container.dart';
 
-import '../controllers/constants/app_assets.dart';
-import '../controllers/constants/app_theme.dart';
+import '../utils/constants/app_assets.dart';
+import '../utils/constants/app_theme.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
